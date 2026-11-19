@@ -1,1 +1,0 @@
-# 932401.grigorieva.karina.lab6
