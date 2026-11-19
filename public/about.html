@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О работе — MovieList</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="brand">
+                <span class="brand-mark"></span>
+                Movie<span>List</span>
+            </a>
+            <nav class="nav">
+                <a href="/" class="nav-link">Фильмы</a>
+                <a href="/about" class="nav-link active">О работе</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main">
+        <div class="hero-head">
+            <h1>О лабораторной работе №6</h1>
+            <p class="subtitle">Введение в Node.js, сервер на Express и технологии PWA</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-box">
+                <span class="box-label">Автор</span>
+                <h3>Григорьева Карина</h3>
+                <p>Студентка группы 932401</p>
+            </div>
+            <div class="about-box">
+                <span class="box-label">Вариант 15</span>
+                <h3>Список фильмов с рейтингом</h3>
+                <p>Сортировка по убыванию, фильтрация через параметр <code>minRating</code> и обработка ошибки <code>400 Bad Request</code>.</p>
+            </div>
+            <div class="about-box">
+                <span class="box-label">PWA и офлайн</span>
+                <h3>Service Worker + Manifest</h3>
+                <p>Приложение можно установить на устройство, а закешированные страницы и данные доступны без интернета.</p>
+            </div>
+        </div>
+
+        <div class="routes-card">
+            <div class="routes-head">
+                <h2>Доступные маршруты сервера (Endpoints)</h2>
+                <span class="status-tag" id="serverStatus">Проверка сервера...</span>
+            </div>
+            <p class="routes-hint">Нажмите на любую ссылку ниже, чтобы открыть ответ сервера в новой вкладке:</p>
+
+            <div class="routes-list">
+                <a href="/" target="_blank" class="route-row">
+                    <span class="method">GET</span>
+                    <code>/</code>
+                    <span class="route-desc">Главная страница с каталогом фильмов</span>
+                </a>
+                <a href="/about" target="_blank" class="route-row">
+                    <span class="method">GET</span>
+                    <code>/about</code>
+                    <span class="route-desc">Страница с информацией о лабораторной работе</span>
+                </a>
+                <a href="/api/status" target="_blank" class="route-row">
+                    <span class="method">GET</span>
+                    <code>/api/status</code>
+                    <span class="route-desc">Проверка статуса работы сервера (ответ в формате JSON)</span>
+                </a>
+                <a href="/api/movies" target="_blank" class="route-row">
+                    <span class="method">GET</span>
+                    <code>/api/movies</code>
+                    <span class="route-desc">Все фильмы, отсортированные по убыванию рейтинга</span>
+                </a>
+                <a href="/api/movies?minRating=8.5" target="_blank" class="route-row">
+                    <span class="method">GET</span>
+                    <code>/api/movies?minRating=8.5</code>
+                    <span class="route-desc">Фильтрация фильмов с рейтингом от 8.5 и выше</span>
+                </a>
+                <a href="/api/movies/1" target="_blank" class="route-row">
+                    <span class="method">GET</span>
+                    <code>/api/movies/1</code>
+                    <span class="route-desc">Получение одного фильма по его ID (параметр пути)</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Григорьева Карина • Группа 932401</span>
+            <span>Лабораторная работа №6 • Вариант 15</span>
+        </div>
+    </footer>
+
+    <script src="/app.js"></script>
+</body>
+</html>
